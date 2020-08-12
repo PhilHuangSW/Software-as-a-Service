@@ -59,3 +59,17 @@ h1, h2, h3{
     opacity: .75;
   }
 }
+
+/* Nav Styles Mobile */
+.navbar-default .navbar-toggle .icon-bar{
+  background-color: white;
+  color: white;
+}
+
+.navbar-default .navbar-toggle,{
+  border: 2px solid white;
+  &:hover, &:focus{
+    background-color: #11998e;
+    opacity: .90;
+  }
+}
