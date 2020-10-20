@@ -35,6 +35,11 @@
       </div>
     </nav>
     
+    <div class="container">
+      <% flash.each do |type, msg| %> <!-- type is like success, danger, warning, secondary, etc...; msg shows what the error or success actually did -->
+        <%= content_tag :div, msg, class: "alert alert-#{type}" %>
+      <% end %>
+    </div>
     <%= yield %>
 
   </body>
