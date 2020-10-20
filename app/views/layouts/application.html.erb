@@ -39,7 +39,35 @@
       <% flash.each do |type, msg| %> <!-- type is like success, danger, warning, secondary, etc...; msg shows what the error or success actually did -->
         <%= content_tag :div, msg, class: "alert alert-#{type}" %>
       <% end %>
+      
+      <!-- 
+      <% [1,2,3,5].each do |num| %>
+        <%= content_tag :div, num, class: "alert alert-success" %>
+      <% end %>
+      -->
+      
+      <!-- EXACTLY the same thing// Bottom is RAW HTML// TOP is Rails way
+      <%= content_tag :div, "the content", class: "alert alert-success" %>
+      <div class="alert alert-success">the content</div>
+      -->
+      
+      <!-- Bootstrap:: 
+        Green -- success
+        Red -- danger
+        teal -- info
+        yellow -- warning
+        blue -- primary
+        grey -- secondary
+        white -- light
+        dark grey -- dark
+        
+        <div class="alert alert-primary" role="alert">
+          This is a primary alert—check it out!
+        </div>
+      -->
+      
     </div>
+    
     <%= yield %>
 
   </body>
